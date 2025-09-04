@@ -25,6 +25,7 @@ interface ButtonProps extends TouchableOpacityProps {
   labelStyle?: TextStyle;
   labelMode?: TextMode;
   labelFamily?: TextFamily;
+  activeOpacity?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -38,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
   labelStyle,
   labelMode = 'titleSmall',
   labelFamily = 'default',
+  activeOpacity = 0.7,
   ...rest
 }) => {
   const { theme } = useTheme();
@@ -67,6 +69,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <TouchableOpacity
       onPress={onPress}
+      activeOpacity={0.7}
       disabled={disabled || loading}
       style={[
         styles.container,

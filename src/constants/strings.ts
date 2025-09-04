@@ -1,6 +1,57 @@
 export const strings = {
   appName: 'MyApp',
 
+  // StoryBook
+  textComponent: 'Text Component',
+  defaultBodyMedium: 'Default BodyMedium',
+
+  displayLarge: 'Display Large',
+  displayMedium: 'Display Medium',
+  displaySmall: 'Display Small',
+
+  headlineLarge: 'Headline Large',
+  headlineMedium: 'Headline Medium',
+  headlineSmall: 'Headline Small',
+
+  titleLarge: 'Title Large',
+  titleSemiLarge: 'Title SemiLarge',
+  titleMedium: 'Title Medium',
+  titleSmall: 'Title Small',
+
+  labelLarge: 'Label Large',
+  labelMedium: 'Label Medium',
+  labelSmall: 'Label Small',
+
+  bodyLarge: 'Body Large',
+  bodyMedium: 'Body Medium',
+  bodySmall: 'Body Small',
+
+  boldTitle: 'Bold Title',
+  semiBoldHeadline: 'SemiBold Headline',
+  mediumTitle: 'Medium Title',
+  lightBody: 'Light Body',
+  regularBody: 'Regular Body',
+
+  dangerRed: 'Danger Red',
+  successGreen: 'Success Green',
+  secondaryFromTheme: 'Secondary from Theme',
+
+  centeredWithMargin: 'Centered with margin',
+  uppercaseTitle: 'Uppercase Title',
+
+  profileText: 'Profile',
+  profileDescription:
+    'This is a profile description text styled with secondary color.',
+
+  veryLongText:
+    'Very long text that will be truncated with ellipsis at the end...',
+  selectableText: 'Selectable Text',
+  accessibleHeadline: 'Accessible Headline',
+
+  themedSemiBoldCustom: 'Themed + SemiBold + Custom Style',
+
+  buttonComponent: 'Button Component',
+
   // General Messages
   welcomeMessage: 'Welcome to MyApp!',
   loading: 'Loading...',
