@@ -69,7 +69,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <TouchableOpacity
       onPress={onPress}
-      activeOpacity={0.7}
+      activeOpacity={activeOpacity}
       disabled={disabled || loading}
       style={[
         styles.container,

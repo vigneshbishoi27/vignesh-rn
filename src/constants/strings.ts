@@ -3,7 +3,7 @@ export const strings = {
 
   // StoryBook
   textComponent: 'Text Component',
-  defaultBodyMedium: 'Default BodyMedium',
+  defaultLabelLarge: 'Default Label Large',
 
   displayLarge: 'Display Large',
   displayMedium: 'Display Medium',
@@ -51,6 +51,10 @@ export const strings = {
   themedSemiBoldCustom: 'Themed + SemiBold + Custom Style',
 
   buttonComponent: 'Button Component',
+  headerComponent: 'Header Component',
+  inputComponent: 'Input Component',
+  modalComponent: 'Modal Component',
+  cardComponent: 'Card Component',
 
   // General Messages
   welcomeMessage: 'Welcome to MyApp!',

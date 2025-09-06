@@ -69,7 +69,7 @@ const fontSizes: Record<TextMode, number> = {
 
 const Text: React.FC<AppTextProps> = ({
   children,
-  mode = 'bodyMedium',
+  mode = 'labelLarge',
   style,
   color,
   family = 'default',

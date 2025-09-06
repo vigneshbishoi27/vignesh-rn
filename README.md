@@ -147,6 +147,25 @@ Step 2:
     import SvgIcons from './src/assets/SvgIcons';
     <SvgIcons.Logo />
 
+- Icon 
+    - react-native-vector-icons has been deprecated, now if we want to use use like npm i @react-native-vector-icons/ionicons or npm i @react-native-vector-icons/fontawesome
+
+- Toast message - react-native-toast-message
+
+- Added Type check 
+    - add to package file -   "scripts": { "typecheck": "tsc --noEmit" },
+    - add this too tsconfig.json for strick check
+          "compilerOptions": {
+            "strict": true,                // enables all strict checks
+            "noImplicitAny": true,         // disallow variables with implicit "any"
+            "noUnusedLocals": true,        // error if you declare but don’t use a variable
+            "noUnusedParameters": true,    // error if a function param is unused
+            "noFallthroughCasesInSwitch": true, // catch missing "break" in switch
+            "forceConsistentCasingInFileNames": true,
+            "esModuleInterop": true,
+            "skipLibCheck": true,          // faster builds, ignore type errors in node_modules, Skips type-checking .d.ts files
+            "types": ["react", "react-native", "jest"]
+          },
 
 
 

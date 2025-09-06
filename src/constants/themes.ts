@@ -20,6 +20,8 @@ export const lightColors = {
   info: '#17a2b8',
 
   disabled: '#bdc3c7',
+
+  loaderBG: 'rgba(0,0,0,0.35)',
 };
 
 export type LightColors = typeof lightColors;
@@ -64,6 +66,8 @@ export const darkTheme: Theme = {
 
     // Disabled State
     disabled: '#7f8c8d',
+
+    loaderBG: 'rgba(0,0,0,0.35)',
   },
 };
 

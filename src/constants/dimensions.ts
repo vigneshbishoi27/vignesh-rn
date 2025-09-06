@@ -1,9 +1,9 @@
-import { Dimensions, Platform } from 'react-native';
+import { Dimensions } from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 const windowDimensions = Dimensions.get('window');
-const screenDimensions = Dimensions.get('screen');
+// const screenDimensions = Dimensions.get('screen');
 
 export const WIDTH = windowDimensions.width;
 export const HEIGHT = windowDimensions.height;

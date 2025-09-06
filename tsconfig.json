@@ -1,5 +1,16 @@
 {
   "extends": "@react-native/typescript-config",
+    "compilerOptions": {
+    "strict": true,                // enables all strict checks
+    "noImplicitAny": true,         // disallow variables with implicit "any"
+    "noUnusedLocals": true,        // error if you declare but don’t use a variable
+    "noUnusedParameters": true,    // error if a function param is unused
+    "noFallthroughCasesInSwitch": true, // catch missing "break" in switch
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,          // faster builds, ignore type errors in node_modules, Skips type-checking .d.ts files
+    "types": ["react", "react-native", "jest"]
+  },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["**/node_modules", "**/Pods"]
 }
