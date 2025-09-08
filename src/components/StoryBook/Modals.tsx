@@ -7,7 +7,7 @@ import { Button, Text } from '../index';
 import { useTheme } from '../../context/ThemeContext';
 import Ionicons from '@react-native-vector-icons/ionicons';
 
-const CommonModals = () => {
+const Modals = () => {
   const { theme, themeType } = useTheme();
   const styles = createStyles(theme.colors);
 
@@ -198,7 +198,7 @@ const CommonModals = () => {
   );
 };
 
-export default CommonModals;
+export default Modals;
 
 const createStyles = (colors: LightColors) =>
   StyleSheet.create({

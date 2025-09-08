@@ -10,13 +10,17 @@ import {
   verticalScalePx,
 } from '../constants';
 import { strings } from '../constants/strings';
-import CommonStyles from '../constants/commonStyles';
+import CommonStyles, { createRoundImageStyle } from '../constants/commonStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from './common/Header';
 import Images from '../assets/Images';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import Toast from 'react-native-toast-message';
-import CommonModals from './StoryBook/CommonModals';
+import Modals from './StoryBook/Modals';
+import Card from './common/Card';
+import ProfileCard from './common/ProfileCard';
+import ProductCard from './common/ProductCard';
+import ProductListCard from './common/ProductListCard';
 
 const StoryBook = () => {
   const { theme, toggleTheme } = useTheme();
@@ -373,14 +377,144 @@ const StoryBook = () => {
           {strings.modalComponent}
         </Text>
 
-        <CommonModals />
+        <Modals />
 
         {/*  */}
         {/*  */}
 
-        {/* <Text mode="headlineSmall" style={styles.buttonComponent}>
+        <Text mode="headlineSmall" style={styles.buttonComponent}>
           {strings.cardComponent}
-        </Text> */}
+        </Text>
+
+        <Card
+          title="Default Card"
+          description="This is a simple default card."
+        />
+
+        <Card
+          title="Outlined Card"
+          description="This card has a border."
+          variant="outlined"
+        />
+
+        <Card
+          title="Shadow Card"
+          description="This card has a shadow."
+          variant="shadow"
+          onPress={() => console.log('Card pressed')}
+        />
+
+        <Card
+          image="https://picsum.photos/300/200"
+          title="Image Card"
+          description="Cute kitten 🐱"
+          variant="image"
+        />
+
+        <Card
+          image="https://picsum.photos/300/200"
+          title="Image Card"
+          description="Cute kitten 🐱"
+          variant="image"
+          imageStyle={styles.br0}
+          containerStyle={styles.imageCardContainer}
+          titleStyle={styles.ph12}
+          descriptionStyle={styles.phpb12}
+        />
+
+        <Card
+          image="https://picsum.photos/100/100"
+          title="List Card"
+          subtitle="Kitten"
+          description="This is a list-style card with left image."
+          variant="list"
+        />
+
+        <Card
+          image="https://picsum.photos/100/100"
+          title="Round List Card"
+          subtitle="Kitten"
+          description="This is a list-style card with left image."
+          variant="list"
+          imageStyle={[createRoundImageStyle(60).round, {}]}
+        />
+        <Card
+          image="https://picsum.photos/100/100"
+          title="Full image list card"
+          subtitle="Kitten"
+          description="This is a list-style card with left image."
+          variant="list"
+          imageStyle={styles.fullImageListCardImage}
+          containerStyle={styles.fullImageListCardContainer}
+        />
+
+        <ProfileCard
+          avatar="https://randomuser.me/api/portraits/men/32.jpg"
+          name="John Doe"
+          subtitle="12:47 PM"
+          description="Active 5m ago"
+          subDescription="01:47 PM"
+          actionLabel="Message"
+          // onActionPress={() => console.log('Message pressed')}
+          onPress={() => console.log('Card pressed')}
+        />
+
+        <ProfileCard
+          avatar="https://randomuser.me/api/portraits/men/32.jpg"
+          name="John Doe"
+          subtitle="12:47 PM"
+          description="Active 5m ago"
+          subDescription="01:47 PM"
+          actionLabel="Message"
+          variant="outlined"
+          // onActionPress={() => console.log('Message pressed')}
+          onPress={() => console.log('Card pressed')}
+        />
+
+        <ProfileCard
+          avatar="https://randomuser.me/api/portraits/men/32.jpg"
+          name="John Doe"
+          subtitle="12:47 PM"
+          description="Active 5m ago"
+          subDescription="01:47 PM"
+          actionLabel="Message"
+          variant="shadow"
+          // onActionPress={() => console.log('Message pressed')}
+          onPress={() => console.log('Card pressed')}
+        />
+
+        <ProfileCard
+          avatar="https://randomuser.me/api/portraits/men/32.jpg"
+          name="John Doe"
+          // subtitle="12:47 PM"
+          description="Active 5m ago"
+          // subDescription="01:47 PM"
+          actionLabel="Message"
+          variant="shadow"
+          onActionPress={() => console.log('Message pressed')}
+          onPress={() => console.log('Card pressed')}
+        />
+
+        <ProductCard
+          image="https://picsum.photos/400/300"
+          title="Wireless Headphones Bluetooth 5.0 with Noise Cancelling"
+          price="$129.99"
+          rating={4.5}
+          onPress={() => console.log('Product pressed')}
+          onAddToCart={() => console.log('Added to cart')}
+        />
+
+        <ProductListCard
+          image="https://picsum.photos/200/200"
+          title="Nike Air Max 2025 Sneakers"
+          price="$89.99"
+          discountPrice="$129.99"
+          discountPercent={30}
+          rating={4.3}
+          description="Lightweight running shoes with breathable fabric and cushioned sole."
+          onPress={() => console.log('Product pressed')}
+          onAddToCart={() => console.log('Added to cart')}
+        />
       </ScrollView>
       <Loader overlay visible={loading} />
     </SafeAreaView>
@@ -391,6 +525,32 @@ export default StoryBook;
 
 const createStyles = (colors: LightColors) =>
   StyleSheet.create({
+    imageCardContainer: {
+      padding: 0,
+      shadowOpacity: 0.1,
+      shadowOffset: { width: 0, height: 2 },
+      shadowRadius: 4,
+      elevation: 3,
+      shadowColor: colors.shadow,
+    },
+    phpb12: { paddingHorizontal: scalePx(12), paddingBottom: scalePx(12) },
+    ph12: { paddingHorizontal: scalePx(12) },
+    br0: { borderRadius: 0 },
+    fullImageListCardContainer: {
+      paddingVertical: 0,
+      paddingLeft: 0,
+      shadowColor: colors.shadow,
+      shadowOpacity: 0.1,
+      shadowOffset: { width: 0, height: 2 },
+      shadowRadius: 4,
+      elevation: 3,
+    },
+    fullImageListCardImage: {
+      width: scalePx(100),
+      height: scalePx(100),
+      borderTopRightRadius: 0,
+      borderBottomRightRadius: 0,
+    },
     tintColorWhite: { tintColor: colors.white },
     ml10: { marginLeft: scalePx(10) },
     Profile: { width: scalePx(20), height: scalePx(20), resizeMode: 'cover' },

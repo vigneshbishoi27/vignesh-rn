@@ -10,6 +10,7 @@ export const lightColors = {
   textPrimary: '#333333',
   textSecondary: '#666666',
   textInverse: '#ffffff',
+  textTertiary: '#999999',
 
   border: '#dddddd',
   shadow: '#000000',
@@ -51,6 +52,7 @@ export const darkTheme: Theme = {
     textPrimary: '#ecf0f1',
     textSecondary: '#bdc3c7',
     textInverse: '#ffffff',
+    textTertiary: '#aaaaaa',
 
     // Borders and Dividers
     border: '#7f8c8d',

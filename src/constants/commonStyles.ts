@@ -1,5 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { ImageStyle, StyleSheet, ViewStyle } from 'react-native';
 import { lightColors } from './themes';
+import { scalePx } from './dimensions';
 
 const CommonStyles = StyleSheet.create({
   // Centering styles
@@ -147,4 +148,29 @@ const CommonStyles = StyleSheet.create({
     right: 10,
   },
 });
+
+export const createRoundViewStyle = (
+  size: number,
+  backgroundColor?: string,
+): { round: ViewStyle } =>
+  StyleSheet.create({
+    round: {
+      width: scalePx(size),
+      height: scalePx(size),
+      borderRadius: scalePx(size / 2),
+      backgroundColor: backgroundColor || 'transparent',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
+
+export const createRoundImageStyle = (size: number): { round: ImageStyle } =>
+  StyleSheet.create({
+    round: {
+      width: scalePx(size),
+      height: scalePx(size),
+      borderRadius: scalePx(size / 2),
+    },
+  });
+
 export default CommonStyles;

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   ActivityIndicator,
   Modal,
+  StyleProp,
   StyleSheet,
   View,
   ViewStyle,
@@ -14,7 +15,7 @@ interface LoaderProps {
   size?: 'small' | 'large' | number;
   color?: string;
   overlay?: boolean;
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
 }
 
 const Loader: React.FC<LoaderProps> = ({

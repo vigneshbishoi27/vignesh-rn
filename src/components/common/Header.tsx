@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ViewStyle,
   TextStyle,
+  StyleProp,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../../context/ThemeContext';
@@ -18,8 +19,8 @@ interface HeaderProps {
   rightIcon?: React.ReactNode | React.ReactNode[];
   onLeftPress?: () => void;
   onRightPress?: () => void;
-  containerStyle?: ViewStyle;
-  titleStyle?: TextStyle;
+  containerStyle?: StyleProp<ViewStyle>;
+  titleStyle?: StyleProp<TextStyle>;
   centerTitle?: boolean;
 }
 

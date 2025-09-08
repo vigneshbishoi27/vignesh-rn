@@ -7,6 +7,7 @@ import {
   TextStyle,
   TextInputProps,
   TouchableOpacity,
+  StyleProp,
 } from 'react-native';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import { useTheme } from '../../context/ThemeContext';
@@ -25,8 +26,8 @@ interface InputProps extends TextInputProps {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   onRightIconPress?: () => void;
-  containerStyle?: ViewStyle;
-  inputStyle?: TextStyle;
+  containerStyle?: StyleProp<ViewStyle>;
+  inputStyle?: StyleProp<TextStyle>;
   secureToggle?: boolean;
 }
 

@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   View,
   TouchableOpacityProps,
+  StyleProp,
 } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import { LightColors, scalePx, verticalScalePx } from '../../constants';
@@ -21,8 +22,8 @@ interface ButtonProps extends TouchableOpacityProps {
   leftIcon?: React.ReactNode;
   disabled?: boolean;
   loading?: boolean;
-  buttonStyle?: ViewStyle;
-  labelStyle?: TextStyle;
+  buttonStyle?: StyleProp<ViewStyle>;
+  labelStyle?: StyleProp<TextStyle>;
   labelMode?: TextMode;
   labelFamily?: TextFamily;
   activeOpacity?: number;
