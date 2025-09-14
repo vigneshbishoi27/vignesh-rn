@@ -3,20 +3,32 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppNavigator from './src/navigation/AppNavigator';
 import { ThemeProvider, useTheme } from './src/context/ThemeContext';
 import Toast from 'react-native-toast-message';
+import ErrorBoundary from 'react-native-error-boundary';
+import MyFallback from './src/components/common/MyFallback';
+import { useEffect } from 'react';
+import Orientation from 'react-native-orientation-locker';
 
 function App() {
   return (
-    <SafeAreaProvider>
-      <ThemeProvider>
-        <AppContent />
-      </ThemeProvider>
-      <Toast />
-    </SafeAreaProvider>
+    <ErrorBoundary FallbackComponent={MyFallback}>
+      <SafeAreaProvider>
+        <ThemeProvider>
+          <AppContent />
+        </ThemeProvider>
+        <Toast />
+      </SafeAreaProvider>
+    </ErrorBoundary>
   );
 }
 
 function AppContent() {
   const { themeType } = useTheme();
+
+  useEffect(() => {
+    Orientation.lockToPortrait(); // lock when this screen opens
+    // return () => Orientation.unlockAllOrientations(); // reset on exit if needed
+  }, []);
+
   return (
     <>
       <StatusBar

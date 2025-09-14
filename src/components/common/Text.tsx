@@ -94,7 +94,11 @@ const Text: React.FC<AppTextProps> = ({
   };
 
   return (
-    <RnText style={[getVariantStyle(), style]} {...rest}>
+    <RnText
+      style={[getVariantStyle(), style]}
+      allowFontScaling={false}
+      {...rest}
+    >
       {children}
     </RnText>
   );

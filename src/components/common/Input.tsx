@@ -74,6 +74,7 @@ const Input = React.forwardRef<RNTextInput, InputProps>(
             style={[styles.input, inputStyle]}
             placeholderTextColor={theme.colors.textSecondary}
             secureTextEntry={isSecure}
+            allowFontScaling={false}
             {...rest}
           />
 

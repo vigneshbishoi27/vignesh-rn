@@ -27,9 +27,15 @@ const StoryBook = () => {
   const styles = createStyles(theme.colors);
 
   const [loading, setLoading] = useState(false);
+  const [showBuggy, setShowBuggy] = useState(false);
 
   const passwordRef = useRef<any>(null);
   const usernameRef = useRef<any>(null);
+
+  const BuggyComponent = () => {
+    throw new Error('💥 Simulated crash during render!');
+    return null;
+  };
 
   return (
     <SafeAreaView>
@@ -282,6 +288,14 @@ const StoryBook = () => {
             buttonStyle={CommonStyles.flex1}
           />
         </View>
+
+        <Button
+          label="Error Boundary"
+          onPress={() => {
+            setShowBuggy(true);
+          }}
+        />
+        {showBuggy && <BuggyComponent />}
 
         {/*  */}
         {/*  */}

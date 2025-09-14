@@ -167,6 +167,9 @@ Step 2:
             "types": ["react", "react-native", "jest"]
           },
 
+- Lock to vertical - react-native-orientation-locker
+- Avoid system text - global not working add this to Text & TextInput - allowFontScaling={false}
+- Error boundaries - Added react-native-error-boundary - Not working Need to check more on this.
 
 
 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle
