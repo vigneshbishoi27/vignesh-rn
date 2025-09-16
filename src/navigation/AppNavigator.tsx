@@ -6,11 +6,11 @@ import StoryBook from '../components/StoryBook';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const AppNavigator: React.FC = () => {
-  const HomeScreen = () => {
-    return <StoryBook />;
-  };
+const HomeScreen = () => {
+  return <StoryBook />;
+};
 
+const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator

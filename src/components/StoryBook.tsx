@@ -36,7 +36,7 @@ const StoryBook = () => {
 
   const BuggyComponent = () => {
     throw new Error('💥 Simulated crash during render!');
-    return null;
+    // return null;
   };
 
   return (
@@ -361,8 +361,8 @@ const StoryBook = () => {
         />
         <Header
           title="Custom"
-          containerStyle={{ backgroundColor: 'tomato' }}
-          titleStyle={{ color: 'white', fontSize: 20 }}
+          containerStyle={styles.tomato}
+          titleStyle={styles.tomatoLabel}
           leftIcon={<SvgIcons.Back width={scalePx(20)} height={scalePx(20)} />}
           rightIcon={
             <Image
@@ -567,6 +567,8 @@ export default StoryBook;
 
 const createStyles = (colors: LightColors) =>
   StyleSheet.create({
+    tomatoLabel: { color: 'white', fontSize: 20 },
+    tomato: { backgroundColor: 'tomato' },
     imageCardContainer: {
       padding: 0,
       shadowOpacity: 0.1,
