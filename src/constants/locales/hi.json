@@ -1,0 +1,60 @@
+{
+  "welcome": "स्वागत है",
+  "name": "पूरा नाम",
+  "email": "ईमेल",
+  "password": "पासवर्ड",
+  "confirmPassword": "पासवर्ड की पुष्टि करें",
+  "submit": "जमा करें",
+
+  "textComponent": "टेक्स्ट कॉम्पोनेन्ट",
+  "defaultLabelLarge": "डिफ़ॉल्ट लेबल बड़ा",
+
+  "displayLarge": "डिस्प्ले बड़ा",
+  "displayMedium": "डिस्प्ले मध्यम",
+  "displaySmall": "डिस्प्ले छोटा",
+
+  "headlineLarge": "शीर्षक बड़ा",
+  "headlineMedium": "शीर्षक मध्यम",
+  "headlineSmall": "शीर्षक छोटा",
+
+  "titleLarge": "शीर्षक बड़ा",
+  "titleSemiLarge": "शीर्षक अर्ध-बड़ा",
+  "titleMedium": "शीर्षक मध्यम",
+  "titleSmall": "शीर्षक छोटा",
+
+  "labelLarge": "लेबल बड़ा",
+  "labelMedium": "लेबल मध्यम",
+  "labelSmall": "लेबल छोटा",
+
+  "bodyLarge": "बॉडी बड़ा",
+  "bodyMedium": "बॉडी मध्यम",
+  "bodySmall": "बॉडी छोटा",
+
+  "boldTitle": "बोल्ड शीर्षक",
+  "semiBoldHeadline": "अर्ध-बोल्ड शीर्षक",
+  "mediumTitle": "मध्यम शीर्षक",
+  "lightBody": "हल्का बॉडी",
+  "regularBody": "साधारण बॉडी",
+
+  "dangerRed": "खतरा लाल",
+  "successGreen": "सफलता हरा",
+  "secondaryFromTheme": "थीम से सेकेंडरी",
+
+  "centeredWithMargin": "मार्जिन के साथ केंद्रित",
+  "uppercaseTitle": "अपरकेस शीर्षक",
+
+  "profileText": "प्रोफ़ाइल",
+  "profileDescription": "यह प्रोफ़ाइल विवरण का टेक्स्ट है जिसे सेकेंडरी रंग से स्टाइल किया गया है।",
+
+  "veryLongText": "बहुत लंबा टेक्स्ट जिसे अंत में त्रिबिंदु के साथ काटा जाएगा...",
+  "selectableText": "चयन योग्य टेक्स्ट",
+  "accessibleHeadline": "सुलभ शीर्षक",
+
+  "themedSemiBoldCustom": "थीम + अर्ध-बोल्ड + कस्टम शैली",
+
+  "buttonComponent": "बटन कॉम्पोनेन्ट",
+  "headerComponent": "हेडर कॉम्पोनेन्ट",
+  "inputComponent": "इनपुट कॉम्पोनेन्ट",
+  "modalComponent": "मॉडल कॉम्पोनेन्ट",
+  "cardComponent": "कार्ड कॉम्पोनेन्ट"
+}

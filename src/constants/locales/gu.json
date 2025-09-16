@@ -1,0 +1,60 @@
+{
+  "welcome": "સ્વાગત છે",
+  "name": "પૂર્ણ નામ",
+  "email": "ઇમેલ",
+  "password": "પાસવર્ડ",
+  "confirmPassword": "પાસવર્ડ પુષ્ટિ કરો",
+  "submit": "સબમિટ કરો",
+
+  "textComponent": "ટેક્સ્ટ કોમ્પોનેન્ટ",
+  "defaultLabelLarge": "ડિફૉલ્ટ લેબલ લાર્જ",
+
+  "displayLarge": "ડિસ્પ્લે લાર્જ",
+  "displayMedium": "ડિસ્પ્લે મિડિયમ",
+  "displaySmall": "ડિસ્પ્લે સ્મોલ",
+
+  "headlineLarge": "હેડલાઇન લાર્જ",
+  "headlineMedium": "હેડલાઇન મિડિયમ",
+  "headlineSmall": "હેડલાઇન સ્મોલ",
+
+  "titleLarge": "ટાઇટલ લાર્જ",
+  "titleSemiLarge": "ટાઇટલ સેમી લાર્જ",
+  "titleMedium": "ટાઇટલ મિડિયમ",
+  "titleSmall": "ટાઇટલ સ્મોલ",
+
+  "labelLarge": "લેબલ લાર્જ",
+  "labelMedium": "લેબલ મિડિયમ",
+  "labelSmall": "લેબલ સ્મોલ",
+
+  "bodyLarge": "બોડી લાર્જ",
+  "bodyMedium": "બોડી મિડિયમ",
+  "bodySmall": "બોડી સ્મોલ",
+
+  "boldTitle": "બોલ્ડ ટાઇટલ",
+  "semiBoldHeadline": "સેમીબોલ્ડ હેડલાઇન",
+  "mediumTitle": "મિડિયમ ટાઇટલ",
+  "lightBody": "લાઇટ બોડી",
+  "regularBody": "રેગ્યુલર બોડી",
+
+  "dangerRed": "ખતરો લાલ",
+  "successGreen": "સફળતા લીલો",
+  "secondaryFromTheme": "થીમમાંથી સેકન્ડરી",
+
+  "centeredWithMargin": "માર્જિન સાથે કેન્દ્રિત",
+  "uppercaseTitle": "અપરકેસ ટાઇટલ",
+
+  "profileText": "પ્રોફાઇલ",
+  "profileDescription": "આ પ્રોફાઇલનું વર્ણન લખાણ છે જે સેકન્ડરી રંગ સાથે સ્ટાઇલ કરવામાં આવ્યું છે.",
+
+  "veryLongText": "ખૂબ લાંબો લખાણ જે અંતે ત્રિબિંદુ સાથે કાપી નાખવામાં આવશે...",
+  "selectableText": "પસંદ કરી શકાય તેવું લખાણ",
+  "accessibleHeadline": "પ્રવેશયોગ્ય હેડલાઇન",
+
+  "themedSemiBoldCustom": "થીમ + સેમીબોલ્ડ + કસ્ટમ શૈલી",
+
+  "buttonComponent": "બટન કોમ્પોનેન્ટ",
+  "headerComponent": "હેડર કોમ્પોનેન્ટ",
+  "inputComponent": "ઇનપુટ કોમ્પોનેન્ટ",
+  "modalComponent": "મોડલ કોમ્પોનેન્ટ",
+  "cardComponent": "કાર્ડ કોમ્પોનેન્ટ"
+}

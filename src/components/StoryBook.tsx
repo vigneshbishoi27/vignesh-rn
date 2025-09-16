@@ -9,7 +9,6 @@ import {
   scalePx,
   verticalScalePx,
 } from '../constants';
-import { strings } from '../constants/strings';
 import CommonStyles, { createRoundImageStyle } from '../constants/commonStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from './common/Header';
@@ -21,8 +20,11 @@ import Card from './common/Card';
 import ProfileCard from './common/ProfileCard';
 import ProductCard from './common/ProductCard';
 import ProductListCard from './common/ProductListCard';
+import { changeLanguage } from '../constants/i18n';
+import { useTranslation } from 'react-i18next';
 
 const StoryBook = () => {
+  const { t } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const styles = createStyles(theme.colors);
 
@@ -44,82 +46,80 @@ const StoryBook = () => {
         showsVerticalScrollIndicator={false}
       >
         <Text mode="headlineSmall" style={styles.textComponent}>
-          {strings.textComponent}
+          {t('textComponent')}
         </Text>
         {/* 1. Basic */}
-        <Text>{strings.defaultLabelLarge}</Text>
+        <Text>{t('defaultLabelLarge')}</Text>
 
         {/* 2. Typography Variants */}
-        <Text mode="displayLarge">{strings.displayLarge}</Text>
-        <Text mode="displayMedium">{strings.displayMedium}</Text>
-        <Text mode="displaySmall">{strings.displaySmall}</Text>
+        <Text mode="displayLarge">{t('displayLarge')}</Text>
+        <Text mode="displayMedium">{t('displayMedium')}</Text>
+        <Text mode="displaySmall">{t('displaySmall')}</Text>
 
-        <Text mode="headlineLarge">{strings.headlineLarge}</Text>
-        <Text mode="headlineMedium">{strings.headlineMedium}</Text>
-        <Text mode="headlineSmall">{strings.headlineSmall}</Text>
+        <Text mode="headlineLarge">{t('headlineLarge')}</Text>
+        <Text mode="headlineMedium">{t('headlineMedium')}</Text>
+        <Text mode="headlineSmall">{t('headlineSmall')}</Text>
 
-        <Text mode="titleLarge">{strings.titleLarge}</Text>
-        <Text mode="titleSemiLarge">{strings.titleSemiLarge}</Text>
-        <Text mode="titleMedium">{strings.titleMedium}</Text>
-        <Text mode="titleSmall">{strings.titleSmall}</Text>
+        <Text mode="titleLarge">{t('titleLarge')}</Text>
+        <Text mode="titleSemiLarge">{t('titleSemiLarge')}</Text>
+        <Text mode="titleMedium">{t('titleMedium')}</Text>
+        <Text mode="titleSmall">{t('titleSmall')}</Text>
 
-        <Text mode="labelLarge">{strings.labelLarge}</Text>
-        <Text mode="labelMedium">{strings.labelMedium}</Text>
-        <Text mode="labelSmall">{strings.labelSmall}</Text>
+        <Text mode="labelLarge">{t('labelLarge')}</Text>
+        <Text mode="labelMedium">{t('labelMedium')}</Text>
+        <Text mode="labelSmall">{t('labelSmall')}</Text>
 
-        <Text mode="bodyLarge">{strings.bodyLarge}</Text>
-        <Text mode="bodyMedium">{strings.bodyMedium}</Text>
-        <Text mode="bodySmall">{strings.bodySmall}</Text>
+        <Text mode="bodyLarge">{t('bodyLarge')}</Text>
+        <Text mode="bodyMedium">{t('bodyMedium')}</Text>
+        <Text mode="bodySmall">{t('bodySmall')}</Text>
 
         {/* 3. Font Families */}
         <Text family="bold" mode="titleLarge">
-          {strings.boldTitle}
+          {t('boldTitle')}
         </Text>
         <Text family="semiBold" mode="headlineSmall">
-          {strings.semiBoldHeadline}
+          {t('semiBoldHeadline')}
         </Text>
         <Text family="medium" mode="titleMedium">
-          {strings.mediumTitle}
+          {t('mediumTitle')}
         </Text>
         <Text family="light" mode="bodyLarge">
-          {strings.lightBody}
+          {t('lightBody')}
         </Text>
         <Text family="regular" mode="bodyMedium">
-          {strings.regularBody}
+          {t('regularBody')}
         </Text>
 
         {/* 4. Custom Colors */}
-        <Text color="#e74c3c">{strings.dangerRed}</Text>
+        <Text color="#e74c3c">{t('dangerRed')}</Text>
         <Text color="#2ecc71" mode="titleMedium">
-          {strings.successGreen}
+          {t('successGreen')}
         </Text>
-        <Text color={theme.colors.secondary}>{strings.secondaryFromTheme}</Text>
+        <Text color={theme.colors.secondary}>{t('secondaryFromTheme')}</Text>
 
         {/* 5. Style Overrides */}
-        <Text style={styles.centeredWithMargin}>
-          {strings.centeredWithMargin}
-        </Text>
+        <Text style={styles.centeredWithMargin}>{t('centeredWithMargin')}</Text>
         <Text mode="titleLarge" style={styles.uppercaseText}>
-          {strings.uppercaseTitle}
+          {t('uppercaseTitle')}
         </Text>
 
         {/* 6. Inside Layout */}
         <View style={styles.mv16}>
-          <Text mode="headlineMedium">{strings.profileText}</Text>
+          <Text mode="headlineMedium">{t('profileText')}</Text>
           <Text mode="bodyLarge" color={theme.colors.textSecondary}>
-            {strings.profileDescription}
+            {t('profileDescription')}
           </Text>
         </View>
 
         {/* 7. Native TextProps */}
         <Text numberOfLines={1} ellipsizeMode="tail" mode="labelMedium">
-          {strings.veryLongText}
+          {t('veryLongText')}
         </Text>
         <Text selectable mode="bodyLarge">
-          {strings.selectableText}
+          {t('selectableText')}
         </Text>
         <Text accessibilityLabel="Greeting Text" mode="headlineSmall">
-          {strings.accessibleHeadline}
+          {t('accessibleHeadline')}
         </Text>
 
         {/* 8. Mixed Example */}
@@ -129,14 +129,14 @@ const StoryBook = () => {
           color={theme.colors.primary}
           style={styles.underlineText}
         >
-          {strings.themedSemiBoldCustom}
+          {t('themedSemiBoldCustom')}
         </Text>
 
         {/*  */}
         {/*  */}
 
         <Text mode="headlineSmall" style={styles.buttonComponent}>
-          {strings.buttonComponent}
+          {t('buttonComponent')}
         </Text>
 
         {/* 1. Default */}
@@ -289,19 +289,47 @@ const StoryBook = () => {
           />
         </View>
 
-        <Button
-          label="Error Boundary"
-          onPress={() => {
-            setShowBuggy(true);
-          }}
-        />
+        <View style={[CommonStyles.row, styles.gap20]}>
+          <Button
+            label="Error Boundary"
+            onPress={() => {
+              setShowBuggy(true);
+            }}
+          />
+          <Button
+            label="Hindi"
+            mode="contained"
+            onPress={async () => {
+              changeLanguage('hi');
+            }}
+            buttonStyle={CommonStyles.flex1}
+          />
+        </View>
+
+        <View style={[CommonStyles.row, styles.gap20]}>
+          <Button
+            label="Gujarati"
+            onPress={() => {
+              changeLanguage('gu');
+            }}
+          />
+          <Button
+            label="English"
+            mode="contained"
+            onPress={() => {
+              changeLanguage('en');
+            }}
+            buttonStyle={CommonStyles.flex1}
+          />
+        </View>
+
         {showBuggy && <BuggyComponent />}
 
         {/*  */}
         {/*  */}
 
         <Text mode="headlineSmall" style={styles.buttonComponent}>
-          {strings.headerComponent}
+          {t('headerComponent')}
         </Text>
         <Header title="Home" />
         <Header
@@ -348,7 +376,7 @@ const StoryBook = () => {
         {/*  */}
 
         <Text mode="headlineSmall" style={styles.buttonComponent}>
-          {strings.inputComponent}
+          {t('inputComponent')}
         </Text>
 
         <Input
@@ -388,7 +416,7 @@ const StoryBook = () => {
         {/*  */}
 
         <Text mode="headlineSmall" style={styles.buttonComponent}>
-          {strings.modalComponent}
+          {t('modalComponent')}
         </Text>
 
         <Modals />
@@ -397,7 +425,7 @@ const StoryBook = () => {
         {/*  */}
 
         <Text mode="headlineSmall" style={styles.buttonComponent}>
-          {strings.cardComponent}
+          {t('cardComponent')}
         </Text>
 
         <Card
